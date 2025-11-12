@@ -1,4 +1,4 @@
 FROM eclipse-temurin:17-jdk
 VOLUME /tmp
-COPY build/libs/SpringBootProjectKube-1.0-SNAPSHOT.jar app.jar
+COPY build/libs/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
