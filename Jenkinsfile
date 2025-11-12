@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master',
+                git branch: 'main',
                     url: 'https://github.com/manasa54/SpringBoot-K8s',
                     credentialsId: 'github-creds'
             }
