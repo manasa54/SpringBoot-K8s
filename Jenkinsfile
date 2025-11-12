@@ -16,6 +16,12 @@ pipeline {
             }
         }
 
+    stage('Build JAR') {
+                steps {
+                    sh './gradlew clean build'
+                }
+            }
+
         stage('Build Docker Image') {
             steps {
                 sh "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} ."
